@@ -22,3 +22,17 @@ for (var i = 1;i < 6 ; i ++){
 
 
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click',function(){
+    const overlay = document.querySelector(".overlay")
+    if (this.getAttribute("class") == "dark"){
+        this.setAttribute("class","light")
+        this.textContent = "Lighten"
+        overlay.style.backgroundColor = "rgba(0,0,0,0.5)"
+    }else{
+        this.setAttribute("class","dark")
+        this.textContent = "Darken"
+        overlay.style.backgroundColor = "rgba(0,0,0,0)"
+    }
+
+
+})
