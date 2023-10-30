@@ -14,6 +14,11 @@ for (var i = 1;i < 6 ; i ++){
     newImage.setAttribute('src', 'images/pic' + i + '.jpg');
     //newImage.setAttribute('alt', xxx);
     thumbBar.appendChild(newImage);
+    newImage.addEventListener('click',function(){
+        displayedImage.src = this.src  
+    })
 }
+
+
 
 /* Wiring up the Darken/Lighten button */
